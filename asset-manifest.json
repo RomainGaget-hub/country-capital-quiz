@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/country-capital-quiz/static/css/main.f855e6bc.css",
+    "main.js": "/country-capital-quiz/static/js/main.a07c9610.js",
+    "static/js/453.5cbb93f4.chunk.js": "/country-capital-quiz/static/js/453.5cbb93f4.chunk.js",
+    "static/media/logo.svg": "/country-capital-quiz/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/country-capital-quiz/index.html",
+    "main.f855e6bc.css.map": "/country-capital-quiz/static/css/main.f855e6bc.css.map",
+    "main.a07c9610.js.map": "/country-capital-quiz/static/js/main.a07c9610.js.map",
+    "453.5cbb93f4.chunk.js.map": "/country-capital-quiz/static/js/453.5cbb93f4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.a07c9610.js"
+  ]
+}
