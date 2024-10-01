@@ -45,5 +45,18 @@
   "devDependencies": {
     "gh-pages": "^6.1.1"
   },
-  "homepage": "https://romaingaget-hub.github.io/country-capital-quiz"
+  "homepage": "https://romaingaget-hub.github.io/country-capital-quiz",
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    }
+  }
 }
