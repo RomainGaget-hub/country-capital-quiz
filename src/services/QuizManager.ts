@@ -3,6 +3,7 @@ import { ICountry } from "./countryService";
 export interface IQuestion {
     country: string;
     capital: string;
+    flag: string;
     options: string[];
 }
 
@@ -88,6 +89,7 @@ export class QuizManager {
                 country: country.name,
                 capital: country.capital,
                 options: Array.from(options),
+                flag: country.flag,
             };
         });
     }

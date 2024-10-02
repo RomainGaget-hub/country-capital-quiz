@@ -1,11 +1,17 @@
 import { useEffect, useState } from 'react';
 import { IQuestion, QuizManager } from '../services/QuizManager';
 import { getCountries, ICountry } from '../services/countryService';
+import Question from './Question';
+import Score from './Score';
 
 const Quiz: React.FC = () => {
     //quiz manager instance
     const [quizManager, setQuizManager] = useState<QuizManager | null>(null);
     const [currentQuestion, setCurrentQuestion] = useState<IQuestion | null>(null);
+    // const [answer, setAnswer] = useState<string | null>(null);
+    // const [score, setScore] = useState<number>(0);
+    // const [gameOver, setGameOver] = useState<boolean>(false);
+
 
     useEffect(() => {
         const setupQuiz = async () => {
@@ -34,12 +40,8 @@ const Quiz: React.FC = () => {
         <div>
             {currentQuestion && (
                 <div>
-                    <h2>What is the capital of {currentQuestion.country}?</h2>
-                    <ul>
-                        {currentQuestion.options.map((option, index) => (
-                            <li key={index} onClick={() => handleAnswerClick(option)}>{option}</li>
-                        ))}
-                    </ul>
+                    <Question question={currentQuestion} options={currentQuestion.options} onAnswer={handleAnswerClick} />
+                    <Score score={quizManager?.getScore() || 0} />
                 </div>
             )}
         </div>
