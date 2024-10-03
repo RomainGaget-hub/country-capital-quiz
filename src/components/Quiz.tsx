@@ -26,6 +26,20 @@ const Quiz: React.FC = () => {
     const handleAnswerClick = (answer: string) => {
         if (quizManager && currentQuestion) {
             const isCorrect = quizManager.checkAnswer(answer);
+            if (isCorrect) {
+                //add class to the answer
+                const answerElement = document.getElementById(answer);
+                if (answerElement) {
+                    answerElement.classList.add("correct");
+                }
+            }
+            else {
+                //add class to the answer
+                const answerElement = document.getElementById(answer);
+                if (answerElement) {
+                    answerElement.classList.add("incorrect");
+                }
+            }
             //handle score update and next question
             if (quizManager.nextQuestion()) {
                 setCurrentQuestion(quizManager.getCurrentQuestion());
